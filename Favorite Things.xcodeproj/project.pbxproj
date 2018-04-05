@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FAB35C7B0B127448A662F4D /* Pods_Favorite_Things.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F39B5DD75D6EB5A5952C93 /* Pods_Favorite_Things.framework */; };
 		FD50AB97207682DE00337F20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AB96207682DE00337F20 /* AppDelegate.swift */; };
 		FD50AB99207682DE00337F20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50AB98207682DE00337F20 /* ViewController.swift */; };
 		FD50AB9C207682DE00337F20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD50AB9A207682DE00337F20 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57427E8627AE4DDE53AF1817 /* Pods-Favorite Things.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite Things.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite Things/Pods-Favorite Things.debug.xcconfig"; sourceTree = "<group>"; };
+		88EE2629A3E8BF84060A6DA7 /* Pods-Favorite Things.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite Things.release.xcconfig"; path = "Pods/Target Support Files/Pods-Favorite Things/Pods-Favorite Things.release.xcconfig"; sourceTree = "<group>"; };
+		B6F39B5DD75D6EB5A5952C93 /* Pods_Favorite_Things.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorite_Things.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD50AB93207682DE00337F20 /* Favorite Things.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favorite Things.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD50AB96207682DE00337F20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD50AB98207682DE00337F20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FAB35C7B0B127448A662F4D /* Pods_Favorite_Things.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24117635C98135A576CEC1E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57427E8627AE4DDE53AF1817 /* Pods-Favorite Things.debug.xcconfig */,
+				88EE2629A3E8BF84060A6DA7 /* Pods-Favorite Things.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F1CDEDB3864D6B1F70E999C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6F39B5DD75D6EB5A5952C93 /* Pods_Favorite_Things.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FD50AB8A207682DE00337F20 = {
 			isa = PBXGroup;
 			children = (
 				FD50AB95207682DE00337F20 /* Favorite Things */,
 				FD50AB94207682DE00337F20 /* Products */,
+				24117635C98135A576CEC1E7 /* Pods */,
+				F1CDEDB3864D6B1F70E999C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD50ABA5207682E000337F20 /* Build configuration list for PBXNativeTarget "Favorite Things" */;
 			buildPhases = (
+				0932AE236C669D83931CA4CB /* [CP] Check Pods Manifest.lock */,
 				FD50AB8F207682DE00337F20 /* Sources */,
 				FD50AB90207682DE00337F20 /* Frameworks */,
 				FD50AB91207682DE00337F20 /* Resources */,
+				9648D8D00C7820D15130C9C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +159,61 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0932AE236C669D83931CA4CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Favorite Things-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9648D8D00C7820D15130C9C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Favorite Things/Pods-Favorite Things-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Favorite Things/Pods-Favorite Things-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD50AB8F207682DE00337F20 /* Sources */ = {
@@ -282,15 +363,13 @@
 		};
 		FD50ABA6207682E000337F20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57427E8627AE4DDE53AF1817 /* Pods-Favorite Things.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TGL44JG796;
 				INFOPLIST_FILE = "Favorite Things/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rose-hulman.fisherds.Favorite-Things";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -300,15 +379,13 @@
 		};
 		FD50ABA7207682E000337F20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88EE2629A3E8BF84060A6DA7 /* Pods-Favorite Things.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TGL44JG796;
 				INFOPLIST_FILE = "Favorite Things/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rose-hulman.fisherds.Favorite-Things";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
